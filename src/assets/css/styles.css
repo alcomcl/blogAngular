@@ -1,0 +1,27 @@
+/* PARA QUE ESTA HOJA DE ESTILOS FUNCIONE, DEBEMOS LLEVARLA AL ARRAT DE ESTILOS DEL 
+FICHERO ANGULAR.JSON */
+
+/* Usamos esta regla css que nos permite cargar fuentes externas */
+    @font-face{
+        font-family: "yanone";
+        src: url('fonts/yanone.ttf');
+    }
+
+    @font-face{
+        font-family: "finger";
+        src: url('fonts/finger.ttf');
+    }
+
+/* Estilos generales de la web */
+    
+        /* Estilos para todos los elementos de la web */
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+    
+    body{
+        font-family: "yanone", Arial, Helvetica;
+        font-size: 20px;
+        background: url();
+    }
