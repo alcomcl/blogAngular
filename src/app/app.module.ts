@@ -1,16 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+/* Importamos las constantes del fichero app.routing.ts que contienen las rutas del proyecto */
+import { appRoutingProviders, routing } from './app.routing';
+
 import { AppComponent } from './app.component';
+import { AboutComponent } from './components/about/about.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { CreateComponent } from './components/create/create.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    ProjectsComponent,
+    CreateComponent,
+    ContactComponent,
+    ErrorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    /* Cargamos la constante routing del fichero app.routing ya que es un modulo */
+    routing
   ],
-  providers: [],
+  providers: [
+    /* Cargamos la constante appRoutingProviders del fichero app.routing ya que es un servicio */
+       appRoutingProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
