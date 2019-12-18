@@ -1,0 +1,16 @@
+
+.container{
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.container h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+
+/*IMPORTANTE: LA MAQUETACION AL FORMULARIO SE HIZO EN LA HOJA GENERAL, PARA QUE DONDE EXISTA UN 
+              FORMULARIO, MANTENGA LOS MISMOS ESTILOS */
