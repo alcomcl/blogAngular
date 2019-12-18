@@ -1,6 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+/* Importamos el HttpClientModule para hacer las peticiones Ajax con HttpClient */
+import { HttpClientModule } from '@angular/common/http';
+
+/* Importamos el FormsModule para usar formularios y el two way data binding */
+import { FormsModule } from '@angular/forms';
+
 /* Importamos las constantes del fichero app.routing.ts que contienen las rutas del proyecto */
 import { appRoutingProviders, routing } from './app.routing';
 
