@@ -29,7 +29,10 @@ import { ErrorComponent } from './components/error/error.component';
   imports: [
     BrowserModule,
     /* Cargamos la constante routing del fichero app.routing ya que es un modulo */
-    routing
+    routing,
+    /* Cargamos los modulos HttpClientModule y FormsModule */
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     /* Cargamos la constante appRoutingProviders del fichero app.routing ya que es un servicio */
