@@ -1,1 +1,43 @@
-<p>create works!</p>
+<div class="container">
+    <h2>{{title}}</h2>
+
+    <!--Convertimos este formulario a un formulario de Angular con la directiva ngForm y el signo # mas un nombre-->
+    <!--Ademas, utizamos el evento ngSubmit que servirá para capturar el evento submit del formulario y cargar el 
+    metodo onSubmit que creamos en el componente-->
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+
+        <p>
+            <label for="name">Nombre</label>
+            <!--Hay que hacer tambien, que cada campo del formulario sea un campo de un formulario de angular-->
+            <!--A cada input lo identificamos con un numbre y le decimos que será un ngModel: #nombre="ngModel" 
+                Esto luego servira para hacer la validacion de datos, etc-->
+            <!--Utilizamos la directiva two way data binding para modificar la propiedad "name" del objeto "project" 
+                de la clase del componente-->
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name">
+         </p>
+         <p>
+            <label for="description">Descripcion</label>
+            <textarea name="description" #name="ngModel" [(ngModel)]="project.description"></textarea>
+         </p>
+         <p>
+            <label for="category">Categoria</label>
+            <input type="text" name="category" #name="ngModel" [(ngModel)]="project.category">
+         </p>
+         <p>
+            <label for="year">Año de Lanzamiento</label>
+            <input type="text" name="year" #name="ngModel" [(ngModel)]="project.year">
+         </p>
+         <p>
+            <label for="langs">Lenguajes utilizados</label>
+            <input type="text" name="langs" #name="ngModel" [(ngModel)]="project.langs">
+         </p>
+         <p>
+            <label for="image">Imgen del proyecto</label>
+            <input type="file" name="image" placeholder="Subir Imagen">
+         </p>
+
+         <input type="submit" value="Enviar"/>
+        
+    </form>
+
+</div>
