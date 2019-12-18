@@ -4,24 +4,112 @@ FICHERO ANGULAR.JSON */
 /* Usamos esta regla css que nos permite cargar fuentes externas */
     @font-face{
         font-family: "yanone";
-        src: url('fonts/yanone.ttf');
+        src: url("fonts/yanone.ttf");
     }
 
     @font-face{
         font-family: "finger";
-        src: url('fonts/finger.ttf');
+        src: url("fonts/finger.ttf");
+    }
+
+/* Estilos para todos los elementos de la web */
+    *{
+        margin: 0px;
+        padding: 0px;
     }
 
 /* Estilos generales de la web */
     
-        /* Estilos para todos los elementos de la web */
-            *{
-                margin: 0px;
-                padding: 0px;
-            }
-    
     body{
         font-family: "yanone", Arial, Helvetica;
-        font-size: 20px;
-        background: url();
+        font-size: 23px;
+        background: url('../img/pattern.png');
+        background-attachment: fixed; /* Para que al momento de hacer scroll, el fondo se quede fijo */
     }
+
+    .clearfix{ /* Para limpiar los flotados */
+        float: none;
+        clear: both;
+    }
+
+/* Barra de Navegacion - cabecera */
+
+    header{
+        display: block; /* Para que actue como un bloque */
+        width: 100%;
+        height: 90px;
+        background: rgba(53, 103, 164, 0.8);
+        position: fixed;
+        text-transform: uppercase;
+    }
+
+    header ul{
+        display: block; /* Para que actue como un bloque */ 
+        width: 45%;
+        height: inherit; /* inherit: significa que esta heredado del padre */
+        margin: 0px auto;
+        margin-top: -3px;
+    }
+
+    header ul li{
+        display: inline-block;
+        margin: 0px auto;
+        text-align: center;
+        line-height: 90px;
+    }
+
+    header a{
+        display: block;
+        padding-right: 20px;
+        padding-left: 20px;
+        height: inherit;
+        text-decoration: none;
+        color: white;
+        transition: all 300ms;
+    }
+
+    header a:hover,
+    .actived{
+        background: rgba(75, 97, 130, 0.8);
+    }
+
+/* Logotipo */
+
+    #logo{
+        font-family: "finger";
+        font-size: 30px;
+    }
+
+    #logo a{
+        transition: color 500ms, transform 500ms;
+    }
+
+    header #logo a:hover{
+        background: transparent;
+        color: black;
+        transform: scale(1.50, 1.50)
+    }
+
+/* Contenedor principal */
+
+    #content{
+        min-height: 700px;
+        width: 75%;
+        margin: 0px auto;
+        box-shadow: 0px 0px 40px black;
+        background: rgba(255, 255, 255, 0.7);
+        border-left: 1px solid #b7b7b7;
+        border-right: 1px solid #b7b7b7;
+        padding-top: 120px;
+    }
+
+/* Footer */
+
+    footer{
+        width: 75%;
+        margin: 0px auto;
+        padding-top: 15px;
+        color: rgba(0,0,0,0.5)
+
+    }
+
